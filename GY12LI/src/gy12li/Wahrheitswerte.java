@@ -1,3 +1,5 @@
+package gy12li;
+
 public class Wahrheitswerte{
   
   public static void main (String args[]){

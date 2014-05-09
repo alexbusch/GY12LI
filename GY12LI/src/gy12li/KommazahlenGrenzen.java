@@ -1,3 +1,5 @@
+package gy12li;
+
 public class KommazahlenGrenzen{
 public static void main(String[] args){
   float f = 42.0f;

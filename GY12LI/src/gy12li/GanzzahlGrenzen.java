@@ -1,7 +1,9 @@
+package gy12li;
+
 public class GanzzahlGrenzen{
     public static void main(String[] args){
       byte b = 42;
-      shorts=42;
+      short s=42;
       int i = 42;
       long l = 42L;
       System.out.println(b);

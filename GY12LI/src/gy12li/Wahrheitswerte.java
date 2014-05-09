@@ -6,8 +6,17 @@ public class Wahrheitswerte{
     boolean bot = true;
     boolean bof = false;
     
+    Boolean boole = Boolean.getBoolean("true");
+    
+    if(bot == false){
+        System.out.println("God Mode");
+    }else{
+        System.out.println("Human Mode");
+    }
+    
     System.out.println(bot);
     System.out.println(bof);
+    System.out.println(boole);
     
   }
 

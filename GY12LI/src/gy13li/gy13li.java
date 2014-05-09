@@ -10,4 +10,8 @@ package gy13li;
  */
 public class gy13li {
     
+    public static void main (String args[]){
+        System.out.println("Hallo from GitHub");
+    }
+    
 }

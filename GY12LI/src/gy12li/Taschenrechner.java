@@ -5,6 +5,7 @@
 package gy12li;
 
 import java.io.Console;
+import java.util.Scanner;
 
 /**
  *
@@ -15,8 +16,7 @@ public class Taschenrechner {
     static String programmname = "Taschenrechner";
     static String autoren = "Reis";
     static double eingabe;
-    static float version = 0.1f;
-    static Console con = System.console();
+    static float version = 0.1f;    
 
     /**
      * Start Methode, zeigt in einer Schleife eine Auswahl an
@@ -49,17 +49,15 @@ public class Taschenrechner {
     }
 
     /**
-     * Liest in der echten Console mit System.console eine eingabe ein. Ist
-     * diese null dann mit einem JOptionPane (z.B. in NetBeans)
+     * Vereinfachtes Einlesen nur auf basis der Klasse Scanner
      *
      * @return eingelesene Zahl als double
      */
     static double zahlEinlesen() {
-        if (con != null) {
-            return Double.valueOf(System.console().readLine());
-        } else {
-            return Double.valueOf(javax.swing.JOptionPane.showInputDialog("Bitte Zahl eingeben"));
-        }
+        // Einlesen mittels der Klasse Scanner
+        Scanner scan = new Scanner(System.in);       
+        return Double.valueOf( scan.next() );
+       
     }
 
     /**

@@ -30,7 +30,7 @@ public class Taschenrechner {
         System.out.println(programmname + " " + version);
         
         //Eine Schleife, Sie zeigt das menü immer wieder an und berechnet...
-        while (eingabe != -1) {
+        do{
             
             // Anzeige des Menüs 1 für Addieren, 2 für...
             System.out.println("Was wollen Sie Berechnen? \n 1)+ \n 2)- \n 3)* \n 4)\\");
@@ -38,14 +38,17 @@ public class Taschenrechner {
             // Zahl einelesen, siehe Funktion zahlEinlesen()
             eingabe = zahlEinlesen();
             System.out.println("Sie haben :" + eingabe + " gewählt");
-
+            if( eingabe == -1)break;
+            if( eingabe > 1)continue;
             // Es wurde eien 1 eingegeben -> wir addieren
             if (eingabe == 1) {
                 System.out.println("Sie wollen addieren, geben Sie Zahl 1 und Zahl 2 ein");
                 System.out.println("Ergebnis: "
                         + addiere(zahlEinlesen(), zahlEinlesen()) +"\n");
+            }else{
+                System.out.println("Ups.. muss ich noch machen");
             }
-        }
+        }while (eingabe != -1);
     }
 
     /**
@@ -68,7 +71,9 @@ public class Taschenrechner {
      * @return addierte Werte
      */
     static double addiere(double a, double b) {
+        double ergebnis;
+        ergebnis = a+b;
+        return ergebnis;
 
-        return a + b;
     }
 }

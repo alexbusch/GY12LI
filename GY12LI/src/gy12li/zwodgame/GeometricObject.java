@@ -1,51 +1,71 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package gy12li.zwodgame;
 
 /**
- *
+ * GeometricObject nach "Java will nur Spielen" von Panis Ludens
  * @author reisma
  */
 public class GeometricObject {
-
+    // Datenfelder zur Speicherung der Position, Breite und Höhe
     private Vertex pos;
     private double width;
     private double height;
-
+    
+    /**
+     * Konstruktor mit Angabe der Breite, Höhe und der Position als Vertex
+     * @param w
+     * @param h
+     * @param poss 
+     */
     public GeometricObject(double w, double h, Vertex poss) {
         setPos(poss);
         setWidth(w);
         setHeight(h);
     }
-
+    /**
+     * Konstruktor mit angabe der Breite und Höhe - Vertex als Position wird mit 0,0 erzeugt
+     * @param w
+     * @param h 
+     */
     public GeometricObject(double w, double h) {
         this(w, h, new Vertex(0, 0));
     }
-
+    /**
+     * Konstruktor der die Breite als Höhe nutzt und einen Vertex mit 00 erstellt
+     * @param w 
+     */
     public GeometricObject(double w) {
         this(w, w);
     }
-
+    /**
+     * Konstruktor Setze Rechteck mit Breite/Höhe 10 und Position 0,0
+     */
     public GeometricObject() {
         this(10);
     }
-
+    
+    /***
+     * Konstruktor erzeugt Breite/Höhe 0 und Position 0,0
+     * @param pos 
+     */
     public GeometricObject(Vertex pos) {
         this(0, 0, pos);
     }
 
+    /**
+     * Ausgabe der Objekt Daten Breite, Höhe und Position
+     * @return 
+     */
+    @Override
     public String toString() {
-        return "width=" + width + ", height=" + height + ", pos=" + pos;
+        return "width=" + getWidth()+ ", height=" + getHeight() + ", pos=" + pos;
     }
 
     public double circumference() {
-        return 2 * (width + height);
+        return 2 * (getWidth() + getHeight());
     }
 
     public double area() {
-        return width * height;
+        return getWidth() * getHeight();
     }
 
     public boolean contains(Vertex v) {

@@ -1,8 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package gy12li.zwodgame;
+
 
 import javax.swing.JFrame;
 
@@ -13,7 +10,9 @@ import javax.swing.JFrame;
 public class JFrameTest {
 
     public static void main(String[] args) {
-        JFrame f = new JFrame("Hier könnte Ihr Name stehen");
-        f.setVisible(true);
+        JFrame f1 = new JFrame("Hier könnte Ihr Name stehen 1");
+        JFrame f2 = new JFrame("Hier könnte Ihr Name stehen 2");
+        f1.setVisible(true);
+        f2.setVisible(true);
     }
 }

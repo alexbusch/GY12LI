@@ -6,8 +6,6 @@
 
 package name.panitz.ludens.animationGame;
 
-import gy12li.zwodgame.SimpleOval;
-import gy12li.zwodgame.Vertex;
 import java.awt.Graphics;
 
 /**

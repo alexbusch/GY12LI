@@ -4,6 +4,9 @@
  */
 package gy12li.zwodgame;
 
+import name.panitz.ludens.animationGame.Vertex;
+import name.panitz.ludens.animationGame.GeometricObject;
+
 /**
  *
  * @author reisma

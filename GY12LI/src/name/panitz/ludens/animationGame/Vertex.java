@@ -1,4 +1,4 @@
-package gy12li.zwodgame;
+package name.panitz.ludens.animationGame;
 
 /**
  * Klasse Vertex zur Abbildung zweier Punkte im Koordinatensystem (X,y -

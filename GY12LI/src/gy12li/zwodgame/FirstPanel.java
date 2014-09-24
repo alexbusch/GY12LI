@@ -4,6 +4,9 @@
  */
 package gy12li.zwodgame;
 
+import name.panitz.ludens.animationGame.GeometricObject;
+import name.panitz.ludens.animationGame.Vertex;
+import name.panitz.ludens.animationGame.SimpleOval;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.IOException;

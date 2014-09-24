@@ -6,7 +6,6 @@
 
 package name.panitz.ludens.animationGame;
 
-import gy12li.zwodgame.Vertex;
 import name.panitz.ludens.util.ShowInFrame;
 
 /**

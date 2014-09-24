@@ -1,5 +1,6 @@
-package gy12li.zwodgame;
+package name.panitz.ludens.animationGame;
 
+import gy12li.zwodgame.NewInterface;
 import java.awt.Color;
 import java.awt.Graphics;
 

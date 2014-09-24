@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package gy12li.zwodgame;
+package name.panitz.ludens.animationGame;
 
 import java.awt.Graphics;
 

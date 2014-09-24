@@ -4,6 +4,8 @@
  */
 package gy12li.zwodgame;
 
+import java.awt.Graphics;
+
 /**
  *
  * @author reisma
@@ -40,4 +42,15 @@ public class SimpleOval extends GeometricObject {
     public boolean equals(Object that) {
         return (that instanceof SimpleOval) && super.equals(that);
     }
+
+    @Override
+    public void paint(Graphics g) {
+        
+        g.fillOval(new Double( getPos().getX() ).intValue(),
+                    new Double( getPos().getY() ).intValue(),
+                    new Double( getWidth() ).intValue(),
+                    new Double( getHeight() ).intValue());
+    }
+    
+    
 }

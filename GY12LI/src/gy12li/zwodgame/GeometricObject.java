@@ -1,14 +1,26 @@
 package gy12li.zwodgame;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 /**
  * GeometricObject nach "Java will nur Spielen" von Panis Ludens
  * @author reisma
  */
-public class GeometricObject {
+public class GeometricObject implements NewInterface{
     // Datenfelder zur Speicherung der Position, Breite und Höhe
     private Vertex pos;
     private double width;
     private double height;
+    
+    private Color color;
+    
+    public GeometricObject(double w, double h, Vertex poss, Color color) {
+        setPos(poss);
+        setWidth(w);
+        setHeight(h);
+        setColor(color);  
+    }
     
     /**
      * Konstruktor mit Angabe der Breite, Höhe und der Position als Vertex
@@ -17,9 +29,7 @@ public class GeometricObject {
      * @param poss 
      */
     public GeometricObject(double w, double h, Vertex poss) {
-        setPos(poss);
-        setWidth(w);
-        setHeight(h);
+        this(w, h, poss, Color.BLACK);
     }
     /**
      * Konstruktor mit angabe der Breite und Höhe - Vertex als Position wird mit 0,0 erzeugt
@@ -152,5 +162,31 @@ public class GeometricObject {
             height = -height;
             pos.y = pos.y - height;
         }
+    }
+
+    /**
+     * @return the color
+     */
+    public Color getColor() {
+        return color;
+    }
+
+    /**
+     * @param color the color to set
+     */
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    @Override
+    public int getGForce(double weight) {
+        return 9*5; // area() * weight);
+    }
+    public void paint(Graphics g){
+        g.fillRect( new Double( getPos().getX() ).intValue(),
+                    new Double( getPos().getY() ).intValue(),
+                    new Double( getWidth() ).intValue(),
+                    new Double( getHeight() ).intValue());
+        
     }
 }
